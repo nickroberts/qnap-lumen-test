@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  qnap-lumen-test:
+    container_name: qnap-lumen-test.app
+    image: php:7.3-apache
+    ports:
+      - "8000:80"
+    volumes:
+      - ./shared/api:/var/www
+      - ./shared/api/public:/var/www/html/
+    networks:
+      - qnap-lumen-test.network
+
+networks:
+  qnap-lumen-test.network:
