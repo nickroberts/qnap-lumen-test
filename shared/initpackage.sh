@@ -10,8 +10,8 @@ case "$1" in
     start)
         echo "starting package..."
         # re-integration stuff goes here - symlinks, file copies, etc...
-        ln -s $QPKG_ROOT/app /home/Qhttpd/Web/UTLABS
-        ln -s $QPKG_ROOT/api/public /home/Qhttpd/Web/UTLABS/api
+        ln -s $QPKG_ROOT/api /home/Qhttpd/Web/UTLABS
+        # ln -s $QPKG_ROOT/api/public /home/Qhttpd/Web/UTLABS/api
         ;;
     stop)
         echo "stopping package..."
