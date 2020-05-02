@@ -11,6 +11,12 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return response()->json(['version' => $router->app->version()]);
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->get('version', function () use ($router) {
+        return response()->json(['version' => $router->app->version()]);
+    });
+});
+
+$router->get('/', function ()  {
+    return view('home');
 });

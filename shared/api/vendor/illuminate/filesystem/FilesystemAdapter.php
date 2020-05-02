@@ -523,8 +523,8 @@ class FilesystemAdapter implements CloudFilesystemContract
         // If the path contains "storage/public", it probably means the developer is using
         // the default disk to generate the path instead of the "public" disk like they
         // are really supposed to use. We will remove the public from this path here.
-        if (Str::contains($path, '/storage/public/')) {
-            return Str::replaceFirst('/public/', '/', $path);
+        if (Str::contains($path, '/storage/html/')) {
+            return Str::replaceFirst('/html/', '/', $path);
         }
 
         return $path;

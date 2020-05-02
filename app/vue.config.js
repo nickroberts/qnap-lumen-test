@@ -17,5 +17,5 @@ module.exports = {
       },
     },
   },
-  outputDir: resolve(__dirname, "../shared/app"),
+  outputDir: resolve(__dirname, "../shared/api/html"),
 };

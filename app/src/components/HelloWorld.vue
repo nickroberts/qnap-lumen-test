@@ -99,7 +99,7 @@ export default {
   }),
   created: function() {
     console.log("created");
-    axios.get("/api").then((response) => (this.data = response.data));
+    axios.get("/api/version").then((response) => (this.data = response.data));
   },
 };
 </script>
